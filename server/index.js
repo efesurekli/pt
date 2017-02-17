@@ -9,8 +9,8 @@ app.use(bodyParser.json());
 
 // start the app
 
-app.listen(3000, url, () =>{
-  console.log('listening at 3000');
+app.listen(80, url, () =>{
+  console.log('listening at 80');
 });
 
 app.get('/', (req, res) => {
