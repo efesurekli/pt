@@ -1,0 +1,16 @@
+{
+  "name": "SurekliPortfolio",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {},
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0"
+  },
+  "devDependencies": {
+    "eslint": "^3.12.2",
+    "standard": "^9.0.0-beta.0"
+  },
+  "author": "Efe Surekli",
+  "license": "MIT"
+}
