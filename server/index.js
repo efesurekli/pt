@@ -1,20 +1,30 @@
 const express = require('express');
 const app = express();
-const bodyParser = require('body-parser');
-const url = '138.197.204.0';
+const path = require('path');
+// const bodyParser = require('body-parser');
 
-// middlewares
+// production settings:
+// const url = '138.197.204.0'; 
+// const port = 80;
 
-app.use(bodyParser.json());
+// development settings: 
+const url = '127.0.0.1'; 
+const port = 3000;
 
-// start the app
+// middlewares:
 
-app.listen(80, url, () =>{
-  console.log('listening at 80');
+// app.use(bodyParser.json());
+
+app.use('/', express.static(path.join(__dirname,'../client/public')));
+
+// start the app:
+app.listen(port, url, () =>{
+  console.log(`listening at ${port}`);
 });
 
-app.get('/', (req, res) => {
-  res.send('hello world 2');
-});
 
+
+// 33.5" 84"
+
+// 33.75 88
 
