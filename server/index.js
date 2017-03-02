@@ -15,16 +15,14 @@ const port = 3000;
 
 // app.use(bodyParser.json());
 
-app.use('/', express.static(path.join(__dirname,'../client/public')));
+app.use('/', express.static(path.join(__dirname,'../client/dist')));
 
 // start the app:
 app.listen(port, url, () =>{
   console.log(`listening at ${port}`);
 });
 
-
-
-// 33.5" 84"
-
-// 33.75 88
-
+app.get('/now', (req, res) => {
+  // tell em what you are working now.
+  res.send(200);
+});
