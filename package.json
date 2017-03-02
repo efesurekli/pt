@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "start": "nodemon server/index.js",
-    "deploy": "grunt build && forever start"   
+    "deploy": "grunt build && forever start server/index.js"   
   },
   "dependencies": {
     "body-parser": "^1.15.2",
