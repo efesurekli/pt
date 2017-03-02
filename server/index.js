@@ -3,13 +3,9 @@ const app = express();
 const path = require('path');
 // const bodyParser = require('body-parser');
 
-// production settings:
-// const url = '138.197.204.0'; 
-// const port = 80;
-
 // development settings: 
-const url = '127.0.0.1'; 
-const port = 3000;
+const url = (process.env.NODE_ENV === 'development') ? '127.0.0.1' : '138.197.204.0'; 
+const port = (process.env.NODE_ENV === 'development') ? 3000 : 80;
 
 // middlewares:
 
